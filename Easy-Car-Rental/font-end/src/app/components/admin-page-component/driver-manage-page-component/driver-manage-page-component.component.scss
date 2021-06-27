@@ -1,0 +1,29 @@
+.cta-btn {
+  background-color: #30336b ;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+
+}
+.cta-btn:hover {
+  background-color: #f9ca24;
+  color:white;
+
+}
+.div-main {
+
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  max-width: 600px;
+  height: 540px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+
+  .div-align {
+    text-align: center;
+  }
+
+}

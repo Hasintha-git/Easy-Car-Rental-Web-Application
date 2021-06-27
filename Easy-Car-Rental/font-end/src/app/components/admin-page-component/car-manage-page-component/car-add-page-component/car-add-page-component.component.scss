@@ -1,0 +1,36 @@
+.div-main {
+
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  max-width: 600px;
+  height: 540px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  text-align: center;
+
+  .div-align {
+    text-align: center;
+  }
+
+}
+.btn-car-save {
+  width: 100%;
+  background-color: #6c5ce7;
+  color: white;
+  height: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+
+}
+.btn-car-save:hover{
+  background-color: gray;
+}
+
+.btn-crud {
+  background-color: white;
+  max-height: 30px;
+  padding: 0px;
+  color: black;
+}

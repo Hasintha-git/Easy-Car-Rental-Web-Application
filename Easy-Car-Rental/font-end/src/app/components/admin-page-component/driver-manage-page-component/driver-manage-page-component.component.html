@@ -1,0 +1,51 @@
+<form  style="width: 3400px;height: 350px">
+  <div class="row col-md-12  div-main">
+
+  <mat-grid-list cols="1" rowHeight="330px" style="text-align: center;">
+    <mat-grid-tile >
+      <form class="example-form text-input-align" >
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>name</mat-label>
+          <input type="text" matInput placeholder="" value="" id="name" [(ngModel)]="name" ngModel name="name">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>address</mat-label>
+          <input type="text" matInput placeholder="" value="" id="address" [(ngModel)]="address" ngModel name="address">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>contact</mat-label>
+          <input type="text" matInput placeholder="" value="" id="contact" [(ngModel)]="contact" ngModel name="contact">
+        </mat-form-field>
+        <br>
+        <br>
+
+        <div class="row col-md-12 offset-md-0 " style="text-align: center">
+          <div class="col-md-6" style="max-height: 30px;padding: 0;text-align: center">
+            <button mat-raised-button color="primary" type="button" (click)="onSubmit()" class="cta-btn">Add Driver</button>
+          </div>
+          <div class="col-md-6" style="max-height: 30px;padding: 0;text-align: center">
+            <button mat-raised-button color="primary" type="button" (click)="updateDriver()" class="cta-btn">Update</button>
+          </div>
+        </div>
+        <div class="col-md-12" style="max-height: 30px;padding: 0;text-align: center">
+          <mat-icon mat-dialog-close class="btn-close" style="text-align: center;bottom:-20px;position: relative" matTooltip="Close" >close</mat-icon>
+        </div>
+      </form>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <br>
+
+
+
+
+  </div>
+</form>

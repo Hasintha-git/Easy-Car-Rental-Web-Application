@@ -1,0 +1,37 @@
+
+<h2 class="title"> Log in</h2>
+
+<p class="subtitle">Don't have an account? <a href="#"> sign Up</a></p>
+  <br>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+    <mat-grid-list cols="1" rowHeight="130px" style="text-align: center;">
+      <mat-grid-tile >
+        <form class="example-form text-input-align" >
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Role</mat-label>
+            <input type="text" matInput placeholder="" value="" id="userName" [(ngModel)]="userName" ngModel name="userName">
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>User Name</mat-label>
+            <input type="text" matInput placeholder="" value="" id="password" [(ngModel)]="password" ngModel name="password">
+          </mat-form-field>
+
+
+
+
+        </form>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <br>
+    <button  mat-raised-button color="primary" class="cta-btn">Registra</button>
+  </form>
+
+  <a class="forget-pass" href="#">Forgot password?</a>
+
+

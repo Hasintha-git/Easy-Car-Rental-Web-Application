@@ -1,0 +1,29 @@
+<div style="background: white">
+  <ul class="list-group">
+    <div class="container">
+      <div class="row row-cols-auto" style="">
+        <li class="list-group-item"
+            style="margin: 16px;width: 250px;height: 320px;background: transparent;border-radius: 20px;bottom: 16px;padding: 0"
+            *ngFor="let i of currentData">
+
+
+          <div class="card-image">
+            <img
+              src="{{imgOne}}"/>
+          </div>
+          <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+          <div class="card-heading">
+            {{i.carName}}
+          </div>
+          <div class="card-text" style="color: #ff5e14" >
+            {{i.color}} Color | {{i.fuel}} Fuel | {{i.transmission}} Transmission | {{i.passenger}} Passengers
+          </div>
+          <div class="card-text">
+            RS : {{i.dailyPrice}} - For Day &nbsp; | &nbsp; {{i.vehicleNum}}
+          </div>
+          <a routerLink="/register" href="#" class="card-button" (click)="GopurchaseOrder(i.vehicleNum,i.currentKm,i.dailyPrice,i.monthPrice,i.carName)"> Purchase</a>
+        </li>
+      </div>
+    </div>
+  </ul>
+</div>

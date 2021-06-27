@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Quicksand:wght@300&family=Titillium+Web:wght@200&display=swap');
+
+.txt-clr {
+ color: black;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'PT Serif', serif;
+}
+.my-custom-scrollbar {
+  position: relative;
+  height: 450px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.remove-icon {
+  color: red;
+  cursor: pointer;
+  &:hover{
+    color: white;
+
+  }
+}
+.update-icon {
+  color: goldenrod;
+  cursor: pointer;
+  &:hover{
+    color: white;
+
+  }
+}
+.add-icon {
+  color: blue;
+  cursor: pointer;
+  &:hover{
+    color: white;
+
+  }
+}
+.tbl-tr-row {
+  color: #333333;
+
+  font-family: 'Heebo', sans-serif;
+
+
+
+  &:hover{
+    background-color: gray;
+    color: white;
+  }
+}
+.custom-modalbox {
+  padding: 0;
+}
+::ng-deep.mat-dialog-container {
+  //padding: 0px !important;
+  //margin: 0px!important;
+  //overflow: visible;
+
+  background: none!important;
+  border-radius: 10px;
+  //overflow-y: hidden!important;
+  //background-color: transparent !important;
+  padding: 0px 0px 0px 0px !important;
+  overflow: hidden !important;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+.backdropBackground {
+
+}

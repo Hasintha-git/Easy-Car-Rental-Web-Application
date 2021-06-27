@@ -1,0 +1,159 @@
+<div col-md-12 style="">
+  <br>
+  <mat-icon  (click)="loadVehicle()" class="remove-icon" matTooltip="Reload Table">sync</mat-icon>
+  <!--<button mat-button >Load Data</button>-->
+  <br>
+  <br>
+  <div class="col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar" style="background: none">
+
+    <table class="table table-sm ">
+      <thead>
+      <tr>
+        <th scope="col" class="txt-clr" >Booking-ID</th>
+        <th scope="col"class="txt-clr">Current-KM</th>
+        <th scope="col"class="txt-clr">DriverOrNot</th>
+        <th scope="col"class="txt-clr">Pickup-Date</th>
+        <th scope="col"class="txt-clr">Rent-Duration</th>
+        <th scope="col"class="txt-clr">Return-Date</th>
+        <th scope="col"class="txt-clr">Vehicle-Num</th>
+        <th scope="col"class="txt-clr">Customer-Id</th>
+        <th scope="col"class="txt-clr">Driver-Id</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of currentData"  class="tbl-click tbl-tr-row" (click)="clickTblRow(row)">
+        <td #tblbookid id="tblbookid">{{row.bookingId}}</td>
+        <td #tblcurrentId id="tblcurrentId">{{row.currentKM}}</td>
+        <td #tbldriverOrnot id="tbldriverOrnot">{{row.driverOrNot}}</td>
+        <td #tblPickupDate id="tblPickupDate">{{row.pickupDate}}</td>
+        <td #tblRentDuration id="tblRentDuration">{{row.rentDuration}}</td>
+        <td #tblReturnDate id="tblReturnDate">{{row.returnDate}}</td>
+        <td #tblVehicleNum id="tblVehicleNum">{{row.car.vehicleNum}}</td>
+        <td #tblCustomerId id="tblCustomerId">{{row.customer.customerId}}</td>
+        <td #tblDriverId id="tblDriverId">{{row.driver.driverId}}</td>
+
+
+      </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<hr>
+<div col-md-12 style="text-align: center;background-color: #333333;color: white;margin-right: 10px;max-height: 30px">
+  <div class="row">
+    <div class="col-6"  >
+      <h3 style="text-align: left;margin-left: 10px">Pay Now</h3>
+    </div>
+    <div class="col-6" style="text-align: right;">
+      {{Date}}
+    </div>
+  </div>
+</div>
+<hr>
+
+
+<div col-md-8 offset-md-2 style="text-align: center;margin-right: 10px;  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+">
+
+  <div class="container">
+    <div class="row">
+      <div class="col" style="margin: auto;top: 0;bottom: 0;">
+        <p class="font-bold " style="text-align: center">
+          {{monthOrDay}} : {{monthOrDayPrice}}
+        </p>
+        <mat-form-field class="example-full-width" style="text-align: center">
+          <mat-label>Rent_Duration</mat-label>
+          <input type="text" matInput placeholder="" value=""  id="rentDuration"[(ngModel)]="rentDuration" ngModel name="rentDuration"  (keydown.enter)="rentPrice(rentDuration)"  style="color: #333333">
+        </mat-form-field>
+        <p class="font-bold " style="text-align: center">
+          Rent Fee : {{rentFee}}
+        </p>
+      </div>
+
+      <div class="col" style="margin: auto;top: 0;bottom: 0;">
+        <p class="font-bold " style="text-align: center">
+          Current-KM : {{currentKM}}
+        </p>
+
+        <mat-form-field class="example-full-width" style="text-align: center">
+          <mat-label>After Return-Km</mat-label>
+          <input type="text"  matInput placeholder="" value=""  id="afterReturKm" [(ngModel)]="afterReturKm" ngModel name="afterReturKm" (keydown.enter)="returnKm(afterReturKm)" style="color: #333333">
+        </mat-form-field>
+
+        <p class="font-bold " style="text-align: center">
+          FreeKm : {{freeKm}}
+        </p>
+        <p class="font-bold " style="text-align: center">
+          Extra Km : {{extraKm}}
+        </p>
+        <p class="font-bold " style="text-align: center">
+          Extra Km Fee : {{extraKmFee}}
+        </p>
+      </div>
+
+      <div class="col" style="margin: auto;top: 0;bottom: 0;">
+
+        <p class="font-bold " style="text-align: center;font-size: 18px;font-weight: bold;">
+          Total Fee : {{finalTot}}
+        </p>
+
+        <button class="btn-bg-1 " style="text-align: center;background-color: #333333;color: white"mat-button (click)="payBtn()">
+          <mat-icon class="remove-icon" matTooltip="Remove Car">attach_money</mat-icon>  Pay Now</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--  <div col-6 style="text-align: center">-->
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      {{monthOrDay}} : {{monthOrDayPrice}}-->
+<!--    </p>-->
+<!--    <mat-form-field class="example-full-width" style="text-align: center">-->
+<!--      <mat-label>Rent_Duration</mat-label>-->
+<!--      <input type="text" matInput placeholder="" value=""  id="rentDuration"[(ngModel)]="rentDuration" ngModel name="rentDuration"  (keydown.enter)="rentPrice(rentDuration)"  style="color: #333333">-->
+<!--    </mat-form-field>-->
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      Rent Fee : {{rentFee}}-->
+<!--    </p>-->
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      Current-KM : {{currentKM}}-->
+<!--    </p>-->
+
+<!--    <mat-form-field class="example-full-width" style="text-align: center">-->
+<!--      <mat-label>After Return-Km</mat-label>-->
+<!--      <input type="text"  matInput placeholder="" value=""  id="afterReturKm" [(ngModel)]="afterReturKm" ngModel name="afterReturKm" (keydown.enter)="returnKm(afterReturKm)" style="color: #333333">-->
+<!--    </mat-form-field>-->
+
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      FreeKm : {{freeKm}}-->
+<!--    </p>-->
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      Extra Km : {{extraKm}}-->
+<!--    </p>-->
+<!--    <p class="font-bold " style="text-align: center">-->
+<!--      Extra Km Fee : {{extraKmFee}}-->
+<!--    </p>-->
+<!--    <hr>-->
+<!--  </div>-->
+
+
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <p class="font-bold " style="text-align: right;font-size: 18px;font-weight: bold">-->
+<!--        Total Fee : {{finalTot}}-->
+<!--      </p>-->
+<!--    </div>-->
+<!--    <div class="col" style="text-align: center">-->
+<!--      <button class="btn-bg-1 " style="text-align: center;background-color: red"mat-button (click)="payBtn()">-->
+<!--        Confirm Req</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

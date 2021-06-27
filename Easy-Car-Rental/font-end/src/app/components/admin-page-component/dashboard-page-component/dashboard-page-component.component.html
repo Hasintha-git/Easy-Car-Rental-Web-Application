@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
+
+<div class="col-md-10 offset-md-1">
+  <div class="row ">
+
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-cherry">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+          <div class="mb-4">
+            <h5 class="card-title mb-0">All Booking</h5>
+          </div>
+          <div class="row align-items-center mb-2 d-flex">
+            <div class="col-8">
+              <h2 class="d-flex align-items-center mb-0">
+                {{bookingCount}}
+              </h2>
+            </div>
+            <div class="col-4 text-right">
+              <span>12% <i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+          <div class="progress mt-1 " data-height="8" style="height: 8px;">
+            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0"
+                 aria-valuemax="100" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-blue-dark">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+          <div class="mb-4">
+            <h5 class="card-title mb-0">Customers</h5>
+          </div>
+          <div class="row align-items-center mb-2 d-flex">
+            <div class="col-8">
+              <h2 class="d-flex align-items-center mb-0">
+                {{customerCount}}
+              </h2>
+            </div>
+            <div class="col-4 text-right">
+              <span>{{customerPrasentag}}<i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+          <div class="progress mt-1 " data-height="8" style="height: 8px;">
+            <div class="progress-bar l-bg-green" role="progressbar" data-width="25%" aria-valuenow="25"
+                 aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-green">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-car"></i></div>
+          <div class="mb-4">
+            <h5 class="card-title mb-0">All Cars</h5>
+          </div>
+          <div class="row align-items-center mb-2 d-flex">
+            <div class="col-8">
+              <h2 class="d-flex align-items-center mb-0">
+                {{carsCount}}
+              </h2>
+            </div>
+            <div class="col-4 text-right">
+              <span>{{carPrasentag}} <i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+          <div class="progress mt-1 " data-height="8" style="height: 8px;">
+            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0"
+                 aria-valuemax="100" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-orange-dark">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fab fa-opencart"></i></div>
+          <div class="mb-4">
+            <h5 class="card-title mb-0">Booking Req</h5>
+          </div>
+          <div class="row align-items-center mb-2 d-flex">
+            <div class="col-8">
+              <h2 class="d-flex align-items-center mb-0">
+                {{reqCount}}
+              </h2>
+            </div>
+            <div class="col-4 text-right">
+              <span>{{bookingPrasentag}}<i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+          <div class="progress mt-1 " data-height="8" style="height: 8px;">
+            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0"
+                 aria-valuemax="100" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="max-height: 600px;">
+  <div class="row">
+    <div class="col side-1">
+      <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [legend]="pieChartLegend">
+      </canvas>
+    </div>
+
+    <div class="col side-2">
+      <canvas baseChart
+              [data]="pieChartData2"
+              [labels]="pieChartLabels2"
+              [chartType]="pieChartType2"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins2"
+              [legend]="pieChartLegend2">
+      </canvas>
+    </div>
+  </div>
+</div>
+
+<div style="display: block;max-width: 600px;max-height: 600px">
+
+</div>
+
+
+<!--******************************-->
+<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">-->
+<link rel="stylesheet" type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+<link rel="stylesheet" type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+<!--<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">-->
+<!--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">-->
+
+<div class="grey-bg container-fluid ">
+  <section id="minimal-statistics">
+    <!--    <div class="row">-->
+    <!--      <div class="col-12 mt-3 mb-1">-->
+    <!--        <h4 class="text-uppercase">Minimal Statistics Cards</h4>-->
+    <!--        <p>Statistics on minimal cards.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <div class="row">
+      <div class="col-xl-3 col-sm-6 col-12 ">
+        <div class="card box-shadow-effect">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-pencil primary font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>5</h3>
+                  <span>Maintain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card box-shadow-effect">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-speech warning font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>156</h3>
+                  <span>New Comments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card box-shadow-effect">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-graph success font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>64 Million</h3>
+                  <span>Total Income</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card box-shadow-effect">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-pointer danger font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>1083</h3>
+                  <span>Total Visits</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,42 @@
+<br>
+<mat-icon  (click)="loadVehicle()" class="remove-icon" matTooltip="Reload Table">sync</mat-icon>
+<!--<button mat-button >Load Data</button>-->
+<br>
+<br>
+<div class="col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar" style="background: none">
+
+  <table class="table table-sm ">
+    <thead>
+    <tr>
+      <th scope="col" class="txt-clr" >Booking-ID</th>
+      <th scope="col"class="txt-clr">Current-KM</th>
+      <th scope="col"class="txt-clr">DriverOrNot</th>
+      <th scope="col"class="txt-clr">Pickup-Date</th>
+      <th scope="col"class="txt-clr">Rent-Duration</th>
+      <th scope="col"class="txt-clr">Return-Date</th>
+      <th scope="col"class="txt-clr">Vehicle-Num</th>
+      <th scope="col"class="txt-clr">Customer-Id</th>
+      <th scope="col"class="txt-clr">Driver-Id</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of currentData"  class="tbl-click tbl-tr-row" >
+      <td #tblbookid id="tblbookid">{{row.bookingId}}</td>
+      <td #tblcurrentId id="tblcurrentId">{{row.currentKM}}</td>
+      <td #tbldriverOrnot id="tbldriverOrnot">{{row.driverOrNot}}</td>
+      <td #tblPickupDate id="tblPickupDate">{{row.pickupDate}}</td>
+      <td #tblRentDuration id="tblRentDuration">{{row.rentDuration}}</td>
+      <td #tblReturnDate id="tblReturnDate">{{row.returnDate}}</td>
+      <td #tblVehicleNum id="tblVehicleNum">{{row.car.vehicleNum}}</td>
+      <td #tblCustomerId id="tblCustomerId">{{row.customer.customerId}}</td>
+      <td #tblDriverId id="tblDriverId">{{row.driver.driverId}}</td>
+
+
+    </tr>
+
+
+    </tbody>
+  </table>
+</div>

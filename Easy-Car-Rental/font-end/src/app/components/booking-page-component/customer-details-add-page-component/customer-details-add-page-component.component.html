@@ -1,0 +1,57 @@
+
+
+<form class="form-style col-md-12 offset-md-0"(ngSubmit)="onSubmit(f)" #f="ngForm" >
+  <div class="row col-md-12  div-main">
+    <h4>Fill Your Details Here</h4>
+<!--    <div class="col-md-6" style="top: 10px;position:relative;" >-->
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>customer Id</mat-label>
+          <input type="text" matInput placeholder="" value=""  id="customerId" [(ngModel)]="customerId" ngModel name="customerId" style="color: #333333">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>customer Name</mat-label>
+          <input type="text" matInput placeholder="" value="" id="customernName" [(ngModel)]="customernName" ngModel name="customernName"style="color: #333333">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>address</mat-label>
+          <input type="text" matInput placeholder="" value="" [(ngModel)]="address" id="address" ngModel name="address" style="color: #333333" >
+        </mat-form-field>
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>contact</mat-label>
+          <input type="text" matInput placeholder="" value="" [(ngModel)]="contact" id="contact" ngModel name="contact" style="color: #333333">
+        </mat-form-field>
+      </div>
+      <div class="mb-1">
+        <mat-label style="color: #1ab394">NIC-IMG</mat-label>
+        <input placeholder="Car IMG" type="file" class="form-control"  id="imgNic" (change)="nicImg($event)" name="imgNic">
+
+      </div>
+
+      <div class="mb-1 ">
+        <mat-label style="color: #1ab394">Lisson-IMG</mat-label>
+        <input placeholder="Car IMG" class="form-control" type="file" id="imgLisson" (change)="lissonImg($event)" name="imgLisson">
+      </div>
+
+
+
+<!--    </div>-->
+    <br>
+    <div class="col-md-6 offset-md-3" style="max-height: 30px;padding: 0;text-align: center">
+      <button  mat-button  type="submit" class="btn-car-save btn-crud" >Submit</button>
+    </div>
+    <mat-icon mat-dialog-close class="remove-icon" matTooltip="Close" style="left: 0;right: 0;margin: auto;bottom: 50px;position: absolute">close</mat-icon>
+  </div>
+
+</form>
+
+

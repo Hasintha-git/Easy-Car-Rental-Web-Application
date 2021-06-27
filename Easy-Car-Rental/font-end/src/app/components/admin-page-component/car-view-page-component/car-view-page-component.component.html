@@ -1,0 +1,55 @@
+<br>
+<mat-icon  (click)="loadVehicle()" class="remove-icon" matTooltip="Reload Table">sync</mat-icon>
+<!--<button mat-button >Load Data</button>-->
+<br>
+<br>
+<div class="col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar" style="background: none">
+
+  <table class="table table-sm ">
+    <thead>
+    <tr>
+      <th scope="col" class="txt-clr" >vehicleNum</th>
+      <th scope="col"class="txt-clr">brand</th>
+      <th scope="col"class="txt-clr">type</th>
+      <th scope="col"class="txt-clr">passenger</th>
+      <th scope="col"class="txt-clr">color</th>
+      <th scope="col"class="txt-clr">priceForKm</th>
+      <th scope="col"class="txt-clr">transmission</th>
+      <th scope="col"class="txt-clr">fuel</th>
+      <th scope="col"class="txt-clr">dailyPrice</th>
+      <th scope="col"class="txt-clr">monthPrice</th>
+      <th scope="col"class="txt-clr">kmForDay</th>
+      <th scope="col"class="txt-clr">kmForMonth</th>
+      <th scope="col"class="txt-clr">currentKm</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of currentData"  class="tbl-click tbl-tr-row" >
+      <td #tblvehicleNum id="tblvehicleNum">{{row.vehicleNum}}</td>
+      <td #tblbrand id="tblbrand">{{row.brand}}</td>
+      <td #tbltype id="tbltype">{{row.type}}</td>
+      <td #tblpassenger id="tblpassenger">{{row.passenger}}</td>
+      <td #tblcolor id="tblcolor">{{row.color}}</td>
+      <td #tblpriceForKm id="tblpriceForKm">{{row.priceForKm}}</td>
+      <td #tbltransmission id="tbltransmission">{{row.transmission}}</td>
+      <td #tblfuel id="tblfuel">{{row.fuel}}</td>
+      <td #tbldailyPrice id="tbldailyPrice">{{row.dailyPrice}}</td>
+      <td #tblmonthPrice id="tblmonthPrice">{{row.monthPrice}}</td>
+      <td #tblkmForDay id="tblkmForDay">{{row.kmForDay}}</td>
+      <td #tblkmForMonth id="tblkmForMonth">{{row.kmForMonth}}</td>
+      <td #tblcurrentKm id="tblcurrentKm">{{row.currentKm}}</td>
+
+      <td (click)="AddNewCar()">  <mat-icon class="add-icon" matTooltip="Add Car">add</mat-icon>
+
+      <td (click)="updateCar(row)">  <mat-icon class="update-icon" matTooltip="Update">update</mat-icon>
+
+      </td>
+      <td (click)="removeCar(row)">  <mat-icon class="remove-icon" matTooltip="Remove Car">delete_forever</mat-icon></td>
+
+    </tr>
+
+
+    </tbody>
+  </table>
+</div>

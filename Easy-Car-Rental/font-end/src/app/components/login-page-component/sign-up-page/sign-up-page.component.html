@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+<mat-grid-list cols="1" rowHeight="330px" style="text-align: center;">
+  <mat-grid-tile >
+    <form class="example-form text-input-align" >
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Role</mat-label>
+        <input type="text" matInput placeholder="" value="" id="role" [(ngModel)]="role" ngModel name="role">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input type="text" matInput placeholder="" value="" id="userName" [(ngModel)]="userName" ngModel name="userName">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="" value="" id="password" [(ngModel)]="password" ngModel name="password">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>NIC</mat-label>
+        <input type="text" matInput placeholder="" value="" id="NIC" [(ngModel)]="NIC" ngModel name="NIC">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input type="text" matInput placeholder="" value="" id="address" [(ngModel)]="address" ngModel name="address">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width " >
+        <mat-label>e-mil</mat-label>
+        <input type="email" matInput placeholder="" value="" id="eMail" [(ngModel)]="eMail" ngModel name="eMail">
+      </mat-form-field>
+
+    </form>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+<br>
+<button mat-raised-button color="primary" class="cta-btn">Registra</button>
+</form>

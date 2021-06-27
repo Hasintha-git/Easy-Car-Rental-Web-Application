@@ -1,0 +1,39 @@
+<br>
+<mat-icon  (click)="loadDrivers()" class="remove-icon" matTooltip="Reload Table">sync</mat-icon>
+<!--<button mat-button >Load Data</button>-->
+<br>
+<br>
+<div class="col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar" style="background: white">
+
+  <table class="table table-sm ">
+    <thead>
+    <tr>
+      <th scope="col"class="txt-clr" >ID</th>
+      <th scope="col"class="txt-clr">Name</th>
+      <th scope="col"class="txt-clr">Address</th>
+      <th scope="col"class="txt-clr">Contact</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of currentData"  class="tbl-click tbl-tr-row" >
+      <td #tblDriverId id="tblDriverId">{{row.driverId}}</td>
+      <td #tblName id="tblName">{{row.name}}</td>
+      <td #tblAddress id="tblAddress">{{row.address}}</td>
+      <td #tblContact id="tblContact">{{row.contact}}</td>
+
+
+      <td (click)="AddNewDriver()">  <mat-icon class="add-icon" matTooltip="Add Car">add</mat-icon>
+
+      <td (click)="updateDriver(row)">  <mat-icon class="update-icon" matTooltip="Update">update</mat-icon>
+
+      </td>
+      <td (click)="removeDriver(row)">  <mat-icon class="remove-icon" matTooltip="Remove Car">delete_forever</mat-icon></td>
+
+    </tr>
+
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,168 @@
+
+
+<script src="car-add-page-component.component.ts"></script>
+<form class="form-style col-md-12 offset-md-0" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+  <div class="row col-md-12  div-main">
+    <div class="col-md-6" style="top: 10px;position:relative;" >
+      <div class="mb-1 " >
+        <mat-form-field class="example-full-width">
+          <mat-label>vehicleNum</mat-label>
+          <input type="text" matInput placeholder="" value=""  id="vehicleNum" [(ngModel)]="vehicleNum" ngModel name="vehicleNum" style="color: #333333">
+        </mat-form-field>
+<!--        <input placeholder="VehicleNum" type="text" class="input-text ">-->
+      </div>
+
+      <div class="mb-1 ">
+        <mat-form-field class="example-full-width">
+          <mat-label>type</mat-label>
+          <input type="text" matInput placeholder="" value=""  id="type" [(ngModel)]="type" ngModel name="type" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="type"type="text" class=" input-text"  id="type" ngModel name="type">-->
+      </div>
+
+      <div class="mb-1 ">
+        <mat-form-field class="example-full-width">
+          <mat-label>brand</mat-label>
+          <input type="text" matInput placeholder="" value="" id="brand"[(ngModel)]="brand"  ngModel name="brand" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="brand"type="text" class=" input-text"  id="brand"  ngModel name="brand" >-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>passenger</mat-label>
+          <input type="text" matInput placeholder="" value="" id="passenger"[(ngModel)]="passenger" ngModel name="passenger" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="passenger"type="text" class=" input-text" id="passenger" ngModel name="passenger">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>color</mat-label>
+          <input type="text" matInput placeholder="" value="" id="color"[(ngModel)]="color" ngModel name="color" style="color: #333333" >
+        </mat-form-field>
+<!--        <input  placeholder="color"type="text" class=" input-text"id="color" ngModel name="color">-->
+      </div>
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>freeKmForDay</mat-label>
+          <input type="text" matInput placeholder="" value="" id="freeKmForDay" [(ngModel)]="freeKmForDay" ngModel name="freeKmForDay" style="color: #333333" >
+        </mat-form-field>
+<!--        <input  placeholder="free Km For Day"type="text" class=" input-text"id="freeKmForDay" ngModel name="freeKmForDay">-->
+      </div>
+
+      <div class="mb-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>freeKmForMonth</mat-label>
+          <input type="text" matInput placeholder="" value="" id="freeKmForMonth" [(ngModel)]="freeKmForMonth" ngModel name="freeKmForMonth" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="free Km For Month"type="text" class=" input-text" id="freeKmForMonth" ngModel name="freeKmForMonth">-->
+      </div>
+
+
+
+    </div>
+
+    <div class="col-md-6"style="top: 20px;position:relative;">
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>transmission</mat-label>
+          <input type="text" matInput placeholder="" value=""id="transmission" [(ngModel)]="transmission" ngModel name="transmission" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="form-label"type="text" class=" input-text" id="transmission" ngModel name="transmission">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>fuel</mat-label>
+          <input type="text" matInput placeholder="" value="" id="fuel" [(ngModel)]="fuel" ngModel name="fuel" style="color: #333333" >
+        </mat-form-field>
+<!--        <input  placeholder="Fuel"type="text" class=" input-text" id="fuel" ngModel name="fuel">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>dailyPrice</mat-label>
+          <input type="text" matInput placeholder="" value=""  id="dailyPrice" [(ngModel)]="dailyPrice" ngModel name="dailyPrice" style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="Daily Price"type="text" class=" input-text"  id="dailyPrice" ngModel name="dailyPrice">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>monthPrice</mat-label>
+          <input type="text" matInput placeholder="" value="" id="monthPrice" [(ngModel)]="monthPrice" ngModel name="monthPrice"style="color: #333333">
+        </mat-form-field>
+<!--        <input  placeholder="Extra 1KM"type="text" class=" input-text" id="monthPrice" ngModel name="monthPrice">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>currentKm</mat-label>
+          <input type="text" matInput placeholder="" value="" [(ngModel)]="currentKm" id="currentKm" ngModel name="currentKm" style="color: #333333" >
+        </mat-form-field>
+<!--        <input placeholder="Current Km" type="text" class=" input-text" id="currentKm" ngModel name="currentKm">-->
+      </div>
+
+      <div class="mb-1">
+        <mat-form-field class="example-full-width">
+          <mat-label>priceForKm</mat-label>
+          <input type="text" matInput placeholder="" value="" [(ngModel)]="priceForKm" id="priceForKm" ngModel name="priceForKm" style="color: #333333">
+        </mat-form-field>
+<!--        <input placeholder="Extra 1KM" type="text" class=" input-text" id="priceForKm" ngModel name="priceForKm">-->
+      </div>
+      <div class="mb-1">
+<!--        <mat-form-field class="example-full-width">-->
+<!--          <mat-label>vehicleNum</mat-label>-->
+<!--          <input type="file" matInput placeholder="" value="" id="img" (change)="carChange({event : {event : $event}})" name="img">-->
+<!--        </mat-form-field>-->
+        <input placeholder="Car IMG" type="file" class="form-control input-text" id="img" (change)="carChange({event : {event : $event}})" name="img">
+      </div>
+
+    </div>
+    <div class="row col-md-12 offset-md-0 " style="text-align: center">
+    <div class="col-md-6" style="max-height: 30px;padding: 0;text-align: center">
+      <button  mat-button  type="submit" class="btn-car-save btn-crud" >Add Car</button>
+    </div>
+      <div class="col-md-6" style="max-height: 30px;padding: 0;text-align: center">
+        <button (click)="updateData(f)" mat-button  type="submit" class="btn-car-save btn-crud" >Update Car</button>
+      </div>
+    </div>
+<!--    <button  mat-button mat-dialog-close type="button" class=""  style="background: #333333;max-height: 30px;padding: 0">-->
+      <mat-icon mat-dialog-close class="remove-icon" matTooltip="Close" style="left: 0;right: 0;margin: auto">close</mat-icon>
+<!--    </button>-->
+
+    <!--    <div class="mb-3">-->
+<!--      <img class="img-car-view" [src]="url" alt="">-->
+
+<!--    </div>-->
+
+
+
+<!--    <div class="col-md-4" style="top: 200px;position:relative;" >-->
+
+
+<!--    <div class="col-md-12" style="">-->
+<!--      <button  mat-button  type="submit" style="background: #333333" class="btn-car-save btn-crud">Add Delete</button>-->
+<!--    </div>-->
+<!--    <div class="col-md-12" style="">-->
+<!--      <button mat-button  type="submit" style="background: #333333" class="btn-car-save btn-crud">Add Update</button>-->
+<!--    </div>-->
+<!--    </div>-->
+  </div>
+
+</form>
+
+
+
+<!--select-->
+<!--<div class="col-6">-->
+<!--  <mat-form-field appearance="fill" style="width: 100%;height: 20px">-->
+<!--    <mat-label>Select Your Choice</mat-label>-->
+<!--    <mat-select disableRipple>-->
+<!--      <mat-option value="1">With-Driver</mat-option>-->
+<!--      <mat-option value="2">With-Out-Driver</mat-option>-->
+<!--    </mat-select>-->
+<!--  </mat-form-field>-->
+<!--</div>-->

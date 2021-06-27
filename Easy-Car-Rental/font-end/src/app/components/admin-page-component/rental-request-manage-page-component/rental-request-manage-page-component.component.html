@@ -1,0 +1,98 @@
+<br>
+<mat-icon (click)="loadRequest()" class="remove-icon" matTooltip="Reload Table">sync</mat-icon>
+<!--<button mat-button >Load Data</button>-->
+<br>
+<br>
+<div class="col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar" style="background: none">
+
+  <table class="table table-sm ">
+    <thead>
+    <tr>
+      <th scope="col" class="txt-clr">RentReqId</th>
+      <th scope="col" class="txt-clr">PickupDate</th>
+      <th scope="col" class="txt-clr">ReturnDate</th>
+      <th scope="col" class="txt-clr">DriverOrNot</th>
+      <th scope="col" class="txt-clr">RentDuration</th>
+      <th scope="col" class="txt-clr">CurrentKM</th>
+      <th scope="col" class="txt-clr">VehicleNum</th>
+      <th scope="col" class="txt-clr">CustomerId</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of currentData" class="tbl-click tbl-tr-row" style="cursor: pointer" (click)="reqTblClick(row)">
+
+      <td #tblRentReqId id="tblRentReqId">{{row.rentId}}</td>
+      <td #tblpickupDate id="tblpickupDate">{{row.pickupDate}}</td>
+      <td #tblreturnDate id="tblreturnDate">{{row.returnDate}}</td>
+      <td #tbldriverOrNot id="tbldriverOrNot">{{row.driverOrNot}}</td>
+      <td #tblrentDuration id="tblrentDuration">{{row.rentDuration}}</td>
+      <td #tblcurrentKM id="tblcurrentKM">{{row.currentKM}}</td>
+      <td #tblvehicleNum id="tblvehicleNum">{{row.car.vehicleNum}}</td>
+      <td #tblcustomerId id="tblcustomerId">{{row.customer.customerId}}</td>
+
+
+
+      <td (click)="delete(row)">
+        <mat-icon class="remove-icon" matTooltip="Remove Car">delete_forever</mat-icon>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<div class="admin-book row-md-10 offset-md-0" style="text-align: center">
+  <div class="container">
+    <div class="row" style="text-align: center;padding-top: 30px;">
+      <div class="col">
+       {{rentReqId}}
+      </div>
+      <div class="col">
+        {{currentKM}}
+      </div>
+      <div class="col">
+        {{pickupDate}}
+      </div>
+      <div class="col">
+        {{returnDate}}
+      </div>
+    </div>
+    <hr>
+    <div class="row" style="text-align: center;padding-top: 30px">
+      <div class="col">
+        {{rentDuration}}
+      </div>
+      <div class="col">
+        {{vehicleNum}}
+      </div>
+      <div class="col">
+        {{customerId}}
+      </div>
+      <div class="col">
+        {{driverOrNote}}
+      </div>
+    </div>
+    <hr>
+    <div class="row" style="text-align: center;padding-top: 30px">
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Select Your Choice</mat-label>
+          <mat-select disableRipple [(ngModel)]="selectDriverOption">
+            <mat-option  *ngFor="let row of driversData" value="{{row.driverId}}">{{row.driverId}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <button class="btn-bg-1 btn-confirm-req" mat-button (click)="bookingSet()"><mat-icon class="remove-icon" matTooltip="Confirm Req">recommend</mat-icon>
+          Confirm Req</button>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

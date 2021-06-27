@@ -1,0 +1,309 @@
+<!--<mat-grid-list cols="2" rowHeight="100%">-->
+<!--  <div class="row col-lg-12">-->
+
+<!--    <mat-grid-tile>-->
+<!--      <div class="col col-lg-6 row-cols-1 side-1" >-->
+<!--        <br>-->
+<!--&lt;!&ndash;          <div class="row row-cols-1" style="border: 1px solid blue;">&ndash;&gt;-->
+<!--            <div class="col" style="max-height:350px; border: 0px solid blue;">-->
+<!--              <img class="img-car" [src]="baseurl" alt="">-->
+<!--            </div>-->
+
+<!--            <div class="col" style="max-height:200px">-->
+<!--              <br>-->
+<!--              <br>-->
+<!--              <br>-->
+<!--              <div class="container">-->
+
+<!--                <div class="row">-->
+<!--                  <div class="col-sm-12">-->
+<!--                    <h1>{{carName}}</h1>-->
+<!--                    <hr>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+
+
+<!--                <div class="row">-->
+<!--                  <div class="col-sm">-->
+<!--                    <label>Color</label>-->
+<!--                    <h1>{{color}}</h1>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm">-->
+<!--                    <label>Monthly-Rent</label>-->
+<!--                    <h1>{{dailyPrice}}</h1>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm">-->
+<!--                    <label>Month-Price</label>-->
+<!--                    <h1>{{monthPrice}}</h1>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <br>-->
+<!--                <div class="row">-->
+<!--                  <div class="col-sm ">-->
+<!--                    <label>Extra-KM</label>-->
+<!--                    <h1>{{extraKM}}</h1>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm">-->
+<!--                    <label>Vehicle-Number</label>-->
+<!--                    <h1>{{vehicleNum}}</h1>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm">-->
+<!--                    <label>Current-KM</label>-->
+<!--                    <h1>{{currentKm}}KM</h1>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <br>-->
+
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+
+
+<!--    </mat-grid-tile>-->
+
+<!--  <mat-grid-tile>-->
+<!--    <div class="col col-lg-6 side-2" >-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-12">-->
+<!--          <label>Customer ID</label>-->
+<!--          <h1>{{customerId}}</h1>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col-6">-->
+<!--          <mat-form-field appearance="fill" style="width: 100%;height: 20px">-->
+<!--            <mat-label>Select Your Choice</mat-label>-->
+<!--            <mat-select disableRipple>-->
+<!--              <mat-option value="1">With-Driver</mat-option>-->
+<!--              <mat-option value="2">With-Out-Driver</mat-option>-->
+<!--            </mat-select>-->
+<!--          </mat-form-field>-->
+<!--        </div>-->
+<!--        <div class="col-6">-->
+<!--          <mat-form-field appearance="fill" style="width: 100%;height: 20px">-->
+<!--            <mat-label>Rent-Method</mat-label>-->
+<!--            <mat-select disableRipple>-->
+<!--              <mat-option value="1">Day</mat-option>-->
+<!--              <mat-option value="2">Month</mat-option>-->
+<!--            </mat-select>-->
+<!--          </mat-form-field>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <br>-->
+<!--      <br>-->
+<!--      <div class="row">-->
+<!--          <mat-form-field appearance="fill">-->
+<!--            <mat-label>Enter a date range</mat-label>-->
+<!--            <mat-date-range-input [rangePicker]="picker">-->
+<!--              <input matStartDate placeholder="Start date">-->
+<!--              <input matEndDate placeholder="End date">-->
+<!--            </mat-date-range-input>-->
+<!--            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--            <mat-date-range-picker #picker></mat-date-range-picker>-->
+<!--          </mat-form-field>-->
+<!--      </div>-->
+
+<!--      <br>-->
+<!--      <br>-->
+<!--      <br>-->
+<!--      <div class="row">-->
+<!--          <button mat-raised-button class="btn-req" color="primary">Request Car</button>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+<!--  </mat-grid-tile>-->
+
+
+<!--  </div>-->
+<!--</mat-grid-list>-->
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="ibox">
+          <div class="ibox-title">
+            <span class="pull-right"> {{customId}}</span>
+            <h5>Items in your cart</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="table-responsive">
+              <table class="table shoping-cart-table">
+                <tbody>
+                <tr>
+                  <td width="120px">
+                    <div class="cart-product-imitation" style="width: 120px">
+                      <img style="width: 100%;" src="https://cdn.pixabay.com/photo/2016/11/18/15/58/vw-1835506__340.jpg"
+                           alt="">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <div class="row col-12">
+
+                      <div class="col-6">
+                        <dl class="small m-b-none">
+                          <dt>Vehicle Number</dt>
+
+                          <dd>{{vehicleNumber}}</dd>
+
+                        </dl>
+                      </div>
+                      <div class="col-6">
+                        <dl class="small m-b-none">
+                          <dt>Current KM</dt>
+
+                          <dd>{{currentKmeteres}}</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </td>
+
+                  <div class="ibox-content" style="width: 100px">
+
+                    RS: {{dailyPrice}}
+                    <p class="small text-muted">One Day</p>
+
+                  </div>
+                  <div class="ibox-content">
+
+                    RS: {{monthPrice}}
+                    <p class="small text-muted">One Month</p>
+
+                  </div>
+
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="ibox-content">
+            <div class="row col-12">
+              <div class="col-6">
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Your Choice</mat-label>
+                  <mat-select disableRipple [(ngModel)]="selectDriverOption">
+                    <mat-option value="With-Driver">With-Driver</mat-option>
+                    <mat-option value="With-Out-Driver">With-Out-Driver</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class=" col-6">
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Rent-Method</mat-label>
+                  <mat-select disableRipple [(ngModel)]="selectRentMethod">
+                    <mat-option value="Day">Day</mat-option>
+                    <mat-option value="Month">Month</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+
+              <div class=" col-6">
+                <mat-form-field appearance="fill">
+                  <mat-label>Enter a date range</mat-label>
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Start date" [(ngModel)]="startDate" ngModel>
+                    <input matEndDate placeholder="End date" [(ngModel)]="endDate" ngModel>
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+              </div>
+
+              <div class=" col-6">
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Total Date Or Month</mat-label>
+                  <mat-select disableRipple [(ngModel)]="selectDay">
+                    <mat-option value="1">1</mat-option>
+                    <mat-option value="2">2</mat-option>
+                    <mat-option value="3">3</mat-option>
+                    <mat-option value="4">4</mat-option>
+                    <mat-option value="5">5</mat-option>
+                    <mat-option value="6">6</mat-option>
+                    <mat-option value="7">7</mat-option>
+                    <mat-option value="8">8</mat-option>
+                    <mat-option value="9">9</mat-option>
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="11">11</mat-option>
+                    <mat-option value="12">12</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <button class="btn-bg-1" mat-button (click)="selectPrice()">Booking Now</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="ibox">
+          <div class="ibox-title">
+            <h5>Cart Summary</h5>
+          </div>
+          <div class="ibox-content">
+                    <span>
+                        <h1>Your Request</h1>
+                    </span>
+            <p class="font-bold ">
+              {{startDate}}
+            </p>
+            <p class="font-bold ">
+              {{endDate}}
+            </p>
+            <p class="font-bold ">
+              {{selectDriverOption}}
+            </p>
+            <p class="font-bold ">
+              {{dailyOrMonth}}
+            </p>
+            <p class="font-bold ">
+              {{selectRentMethod}}
+            </p>
+            <p class="font-bold ">
+              CBB-7859
+            </p>
+            <p class="font-bold ">
+              {{selectDay}}
+            </p>
+            <span>
+               <h1>Total : {{tot}}</h1>
+            </span>
+            <hr>
+            <i class="fa fa-shopping-cart"></i>
+            <span class="text-muted small">
+                      We Approved Your Request After The Manager Process, Please Be Wait...
+                    </span>
+            <button class="btn-bg-1" mat-button routerLink="/home" (click)="sendRentRequest()">Booking Now</button>
+
+          </div>
+        </div>
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <h3>Support : <i class="fa fa-phone"></i> +43 100 783 001</h3>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

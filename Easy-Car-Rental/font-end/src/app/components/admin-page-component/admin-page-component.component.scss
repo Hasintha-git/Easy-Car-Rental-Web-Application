@@ -1,0 +1,51 @@
+.admin-body {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+
+  .side-1{
+    background-color: white;
+    height: 633px;
+
+
+
+  }
+
+  .side-2{
+    //background-color: white;
+    height: 633px;
+    //border: 1px solid red;
+    display: block;
+    background-size: cover;
+
+  }
+}
+.side-box {
+  text-align: center;
+  position: relative;
+  top: 100px;
+
+
+  .btn-1 {
+    height: 60px;
+    width: 100%;
+    background: white;
+    color: black;
+    border: none;
+    //border-bottom: 1px solid #485460;
+  }
+  .btn-1:hover {
+    background-color: #9ea0a9;
+    border-left: 15px solid cornflowerblue;
+
+    color: white;
+    font-size: 22px;
+  }
+
+}
+
+.activated-route {
+  border-left: 15px solid cornflowerblue!important;
+  color: gray!important;
+  font-size: 22px;
+}

@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.container-main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 350px;
+
+  //background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  z-index: 999;
+
+
+}
+.box {
+  z-index: 999;
+  height: 530px;
+  width: 350px;
+  position: relative;
+  //background: rgba(76, 0, 130, 0.5);
+  backdrop-filter: blur(1px);
+  box-shadow: 5px 5px 15px 0 rgba(27, 3, 3, 25%);
+  border-radius: 20px;
+  border-top: 4px solid rgba(159, 38, 245, 25%);
+  border-bottom: 4px solid rgba(159, 38, 245, 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: white;
+
+}
+.box:hover {
+  box-shadow: 0 0 35px 0 rgba(27, 3, 3, 25%);
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  //background: linear-gradient(to left, rgba(159, 38, 245, 25%), transparent);
+  transform: skew(-18deg);
+  transition: 0.5s;
+  z-index: -2;
+}
+.box:hover::before {
+  transform: translateX(100%);
+}
+.txtNames {
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+}
+.txtNames:hover{
+  border-bottom: 3px solid #130f40;
+
+}
+.activated-route {
+  border-bottom: 3px solid #130f40;
+}
+
+//.home-bg {
+//  height: 100%;
+//
+//  /* Center and scale the image nicely */
+//  background-position: center;
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  overflow: hidden;
+//  background-color: white;
+//
+//
+//}
